@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="RandomizerApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:RandomizerApp.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="Add Items" Icon="add_tab">
+            <ShellContent
+                Title="Add Items"
+                ContentTemplate="{DataTemplate local:Main}"
+                Route="Main" />
+        </Tab>
+        <Tab Title="View List" Icon="find_tab">
+            <ShellContent
+                Title="View List"
+                ContentTemplate="{DataTemplate local:ListPage}"
+                Route="ListPage" />
+        </Tab>
+    </TabBar>
+
+</Shell>

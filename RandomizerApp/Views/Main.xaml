@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RandomizerApp.Views.Main">
+    
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Padding="20,20">
+            <Label x:Name="lblRandom" Text="" FontSize="32" HorizontalOptions="Center" 
+                   FontAttributes="Bold" Margin="0,30,0,30"/>
+            
+            <Frame BorderColor="Gray"
+                   CornerRadius="8"
+                   Padding="15,5"
+                   Margin="0,0,0,15">
+                <Entry x:Name="txtEntity" 
+                       Placeholder="Enter item here..."
+                       IsTextPredictionEnabled="False"
+                       FontSize="16"/>
+            </Frame>
+            
+            <Button Text="Add Item" 
+                    CornerRadius="8"
+                    Margin="0,25,0,0" 
+                    FontAttributes="Bold"
+                    HeightRequest="50" 
+                    Clicked="AddEntity_OnClicked"/>
+
+
+            <Button Text="Randomize" 
+                    Margin="0,100,0,0"
+                    CornerRadius="8"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    Clicked="Randomize_OnClicked"/>
+            
+            <Button Text="Clear" 
+                    CornerRadius="8"
+                    Margin="0,25,0,0" 
+                    Clicked="Clear_OnClicked"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
